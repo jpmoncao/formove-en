@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --color1: #0D2226;
+    --color2: #055941;
+    --color3: #0B8C68;
+    --color4: #2DA657;
+    --color5: #91cf59;
+    --bg-white: #E7F0DE;
+}
+
+
+body {
+    background-color: var(--bg-white);
+}
+
+/* SLIDER */
+.img-slider {
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: #39C369;
+    background-blend-mode: multiply;
+    filter: blur(0.75px);
+}
+
+.img-slider.first {
+    background-image: url(../img/slider/image1.png);
+}
+
+.img-slider.second {
+    background-image: url(../img/slider/image2.png);
+}
+
+.img-slider.third {
+    background-image: url(../img/slider/image3.png);
+}
+
+.carousel-caption {
+    top: 6rem;
+}
+
+.carousel-item h3 {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 2em;
+    text-shadow: 0px 1px 4px rgba(13, 34, 38, 0.75);
+}
+
+.carousel-item p {
+    font-family: 'DM Sans';
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    letter-spacing: 0.015em;
+    text-shadow: 0px 2px 4px rgba(13, 34, 38, 0.75);
+}
+
+.carousel-caption {
+    top: 6rem;
+}
+
+/* MAIN CONTENT */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 0% auto;
+}
+
+.content section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px .3rem;
+    margin-top: 0.5rem;
+}
+
+.content img {
+    width: 12rem;
+}
+
+.content h2 {
+    font: normal 700 1.5em 'DM Sans';
+    text-transform: uppercase;
+    letter-spacing: -0.065em;
+    color: #00251B;
+    text-shadow: 2px 2px 2px rgba(21, 32, 43, 0.25);
+}
+
+.content p {
+    font: normal normal 0.8em 'DM Sans';
+    line-height: 1em;
+    color: #055941;
+    text-shadow: 0px 2px 2px rgba(5, 89, 65, 0.25);
+}
+
+.content button {
+    background: var(--color3);
+    border: 1px solid var(--color2);
+    box-shadow: 0px 4px 4px rgba(13, 34, 38, 0.2);
+    border-radius: 32px;
+    width: 9rem;
+    height: 2rem;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.content button:hover {
+    background: var(--color4);
+    border: 1px solid var(--color2);
+    transform: translateY(-2px);
+    transition: .3s;
+}
+
+.content button:hover>a {
+    color: var(--bg-white);
+    text-decoration: none;
+}
+
+.content .content-cta-btn a {
+    font: normal 700 1em 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.content section.left {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+
+.content section.right {
+    text-align: right;
+}
+
+/* FOOTER/CONTATO */
+footer {
+    margin-top: 15vh;
+    background-color: var(--color2);
+    width: 100%;
+}
+
+footer div.footer-main {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .contato h3 {
+    color: var(--color5);
+    font: normal bold 2em'DM Sans', sans-serif;
+    letter-spacing: 0.01em;
+    text-align: start;
+}
+
+footer .contato h4 {
+    color: white;
+    font: normal normal 1em'DM Sans', sans-serif;
+    letter-spacing: 0.01em;
+    text-align: start;
+}
+
+
+footer .contato .contato-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    filter: invert(1);
+    transition-duration: .3s;
+}
+
+footer .contato .contato-icons a:hover {
+    filter: drop-shadow(0px 3px 12px #cf59c5);
+    transform: scale(104%);
+    transform: translateY(6px);
+    transition-duration: .3s;
+}
+
+
+footer .contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+footer .contato-form input {
+    width: 20rem;
+    height: 2.75rem;
+
+    background-color: #848484;
+    border-radius: 16px;
+    border: none;
+
+    color: white;
+    font: normal bold 0.75em 'DM Sans', sans-serif;
+    vertical-align: top;
+    text-indent: 1.2rem;
+
+    transition: .3s;
+}
+
+footer .contato-form #mensagem {
+    width: 20rem;
+    height: 5.5rem;
+    padding: 1rem 1rem;
+
+    background-color: #848484;
+    border-radius: 16px;
+    border: none;
+
+    color: white;
+    font: normal bold 0.75em 'DM Sans', sans-serif;
+    vertical-align: top;
+
+    transition: .3s;
+    resize: none;
+}
+
+footer .contato-form #mensagem::placeholder,
+footer .contato-form input::placeholder {
+    color: white;
+    font: normal bold 1em 'DM Sans', sans-serif;
+    vertical-align: top;
+    text-indent: 1.2rem;
+}
+
+footer .contato-form #mensagem:focus,
+footer .contato-form input:focus {
+    transform: scale(103%);
+    background-color: white;
+    color: var(--color1);
+    outline: none;
+    transition: .3s;
+}
+
+
+footer .contato-form button {
+    width: 11rem;
+    height: 2.5rem;
+    align-self: flex-end;
+
+    background: var(--color5);
+    border-radius: 32px;
+
+    color: #fff;
+    font: normal bold 1.5em 'DM Sans', sans-serif;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    border: none;
+    transition: .5s;
+}
+
+
+footer .contato-form button img {
+    filter: invert(1);
+    vertical-align: middle;
+}
+
+footer .contato-form button:hover {
+    background-color: white;
+    color: #000;
+    filter: drop-shadow(0px 4px 16px rgba(45, 166, 87, 0.4));
+
+    transform: translateY(5px);
+}
+
+footer .contato-form button:active {
+    transform: translateY(-10px);
+}
+
+footer .contato-form button:hover img {
+    filter: invert(0);
+}
+
+footer h5 {
+    color: white;
+    font: normal normal 0.8em 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+footer h5>a {
+    color: var(--color3);
+}
+
+footer h5>a:hover {
+    color: var(--color5);
+}
+
+/* RESPONSIVITY */
+@media screen and (max-width: 320px) {
+    .carousel-item h3 {
+        font-size: 1.5em;
+    }
+
+    .carousel-item p {
+        font-size: 1em;
+        line-height: 1rem;
+    }
+
+    .content {
+        width: 75vw;
+        margin-left: 0px;
+    }
+
+    .content img {
+        width: 10rem;
+    }
+
+    .content h2 {
+        font: normal 700 1em 'DM Sans', sans-serif;
+    }
+
+    .content p {
+        font: normal normal 0.75em 'DM Sans', sans-serif;
+    }
+
+    .content button {
+        width: 7rem;
+        height: 1.75rem;
+    }
+
+    .content button a {
+        font: normal 700 1em 'Montserrat', sans-serif;
+    }
+
+    footer div.footer-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    footer .contato-form input,
+    footer .contato-form #mensagem {
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 330px) {
+    .carousel-item h3 {
+        font-size: 2em;
+    }
+
+    .carousel-item p {
+        font-size: 1em;
+        line-height: 1.5rem;
+    }
+
+    .carousel-caption {
+        top: 4rem;
+    }
+
+    .content {
+        width: 75vw;
+        margin: 0px;
+    }
+
+    .content img {
+        width: 15rem;
+    }
+
+    .content h2 {
+        font: normal 700 1.75em 'DM Sans', sans-serif;
+    }
+
+    .content p {
+        font: normal normal 0.8em 'DM Sans', sans-serif;
+    }
+
+    .content button {
+        width: 9rem;
+        height: 2.5rem;
+    }
+
+    .content button a {
+        font: normal 700 1.5em 'Montserrat', sans-serif;
+    }
+
+    footer div.footer-main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .carousel-caption {
+        top: 12rem;
+    }
+
+    .content {
+        width: 80vw;
+        margin: 0px auto;
+    }
+
+    .content h2 {
+        font: normal 700 1.8em 'DM Sans';
+    }
+
+    .content p {
+        font: normal normal 1.25em 'DM Sans';
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .carousel-caption {
+        top: 6rem;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .carousel-caption {
+        top: 8rem;
+        width: 50%;
+        margin: 0px auto;
+    }
+
+    .content {
+        width: 90vw;
+    }
+
+    .content section {
+        width: 50%;
+        padding: 0px 1rem;
+    }
+
+    .content img {
+        width: 15rem;
+    }
+
+    .content section.left {
+        flex-direction: row;
+        text-align: right;
+    }
+
+    .content h2 {
+        font: normal 700 1.5em 'DM Sans';
+    }
+
+    .content p {
+        font: normal normal 1em 'DM Sans';
+    }
+
+    .content button {
+        width: 8rem;
+        height: 2rem;
+    }
+
+    .content button a {
+        font: normal 700 1.1em 'Montserrat';
+    }
+
+    footer div.footer-main {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    .carousel-item h3 {
+        margin-top: 5vh;
+        font-size: 3em;
+    }
+
+    .carousel-item p {
+        font-size: 2.5em;
+        line-height: 2.5rem;
+    }
+
+    .carousel-caption {
+        top: 4rem;
+        width: 50%;
+        margin: 0px auto;
+    }
+
+    .content {
+        width: 90vw;
+    }
+
+    .content section {
+        width: 50%;
+        padding: 0px 4rem;
+    }
+
+    .content img {
+        width: 20rem;
+    }
+
+    .content section.left {
+        flex-direction: row;
+        text-align: right;
+    }
+
+    .content h2 {
+        font: normal 700 2.2em 'DM Sans';
+    }
+
+    .content p {
+        font: normal normal 1.5em 'DM Sans';
+    }
+
+    .content button {
+        width: 10rem;
+        height: 2.5rem;
+    }
+
+    .content button a {
+        font: normal 700 1.3em 'Montserrat';
+    }
+
+    footer div.footer-main {
+        flex-direction: row;
+    }
+}
